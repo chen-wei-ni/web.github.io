@@ -1,0 +1,452 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+<title>MY WEB</title>
+<script src="js/jquery-3.4.1.js"></script>
+<link href="bootstrap-4.3.1/css/bootstrap.css" rel="stylesheet">
+<link href="fontawesome-free-5.11.2/css/all.css" rel="stylesheet">
+<script>
+	$('document').ready(function() {
+		$('form div').hide();
+		
+		$('.form i').click(function() {
+			$('form div').slideDown( 1200, 'swing');
+			$(this).hide(1000, 'linear');
+		});
+		
+		$('.col-md-6').hover(function() {
+			$(this).addClass('move');
+		}, function() {
+			$(this).removeClass('move');
+		});
+		
+		setInterval(callMe,2000);  //repeat
+			function callMe(){
+			$('.fixed h3').animate({fontSize: '2em', opacity: '0.4'}, 1000);
+			$('.fixed h3').animate({fontSize: '5em', opacity: '0.4'}, 1000);
+			$('.fixed p').animate({padding: '100px', opacity: '0.8'}, 1000);
+			$('.fixed p').animate({padding: '-100px', opacity: '0.8'}, 1000);
+			}
+			
+		$('div.topA').hide();
+		$(window).scroll(function() {
+			var sh = $(window).scrollTop();
+			
+			if(sh > 1000) {
+				$('div.topA').show(800);
+			}else {
+				$('div.topA').hide(800, 'swing');
+			}
+		});
+		
+		$('div.topA a').click(function() {
+			$('html,body').animate({
+				scrollTop : 0 //到最上面  
+			}, 1500);
+		return false;
+		});
+	});
+
+</script>
+<style>
+ .header{
+	height:850px;
+	background:#B4A582 url('style/tree.jpg') center center no-repeat;
+	background-size:cover;
+	padding-top:350px;
+ }
+ 
+ .nav{
+	background-color:transparent;
+ }
+ 
+ .nav-link{
+	color:#566C73;
+	transition: color 0.3s;
+ }
+ 
+ .nav-link:hover{
+	color:#51A8DD;
+	transition: color 0.3s;
+ }
+ 
+ .nav li{
+	padding-left:20px;
+ }
+ 
+ .article_1 {
+	padding-top:80px;
+	padding-bottom:80px;
+ }
+ 
+ 
+ .description{
+	height:520px;
+	padding-top:100px;
+ }
+ .view {
+	height:520px;
+	overflow:hidden;
+ }
+ 
+ .view img{
+	height:520px;
+ }
+ 
+.icon{
+	background-color:white;
+	padding-bottom:30px;
+	padding-top:40px;
+}
+
+.icon p{
+	border: 3px solid #28c3d4;
+	width:150px;
+	height:150px;
+	border-radius:75px;
+}
+
+ .icon i{
+	font-size:5rem;
+	padding-top:40px;
+	color:#28c3d4;
+ }
+  
+ .form i{
+	font-size:2rem;
+ }
+  
+ form input{
+	width:200px;
+	height:30px;
+	border-radius:15px 0 0 15px;
+	border:1px solid #cccccc;
+	text-indent:10px;
+	outline:none;
+	border:0;
+	background-color:#ececec;
+ }
+   
+ .form p{
+	display:inline-block;
+	height:30px;
+	width:80px;
+	border-radius:0 15px 15px 0;
+	background-color:rgba(255,177,27,0.6);
+	transition:background-color 0.3s;
+	padding-top:2px;
+ }
+ 
+ .form p:hover{
+	background-color:rgba(255,177,27,0.7);
+	transition:background-color 0.3s;
+ }
+ 
+ .form p a{
+	color:rbgb(58,143,183,0.4);
+ }
+ 
+ .form p a:hover{
+	color:rbgb(58,143,183,0.5);
+	text-decoration:none;
+ }
+ .move{
+	cursor:pointer;
+	bottom:2px;
+	right:3px;
+ }
+ 
+ .slide {
+	/*background-color:#F6C555;*/
+	background-image: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+ }
+ 
+ .slide_wh {
+	width:75%;
+	margin:auto;
+ }
+ 
+ .picture01 {
+	width:65%;
+	margin:auto;
+	padding-top:100px;
+ }
+ 
+ .slide .row:nth-child(3) {
+	padding-bottom:100px;
+ }
+ 
+ .picture01 .p_1{
+	overflow:hidden;
+	height:580px;
+	border-radius:15px 15px 0 0;
+ }
+ .picture01 div img{
+	overflow:hidden;
+	height:800px;
+ }
+ .picture01 .word{
+	border-radius: 0 0 15px 15px;
+	
+ }
+ 
+ div.fixed{
+	background:#ccc url('style/101_2.jpg') center center no-repeat;
+	background-size:100%;
+	background-size: cover;
+	background-attachment:fixed;
+	height:580px;
+ }
+ 
+ .fixed div {
+	padding-top:150px;
+ }
+ 
+ .moving_p , .moving_h3 {
+	color:#7a87b0;
+	transition: color 0.3s;
+ }
+  .color {
+	color:#97d9e1;
+	transition: color 0.3s;
+ }
+ 
+ footer{
+	background-image: linear-gradient(to right, #f9eada 0%, #e5e6f4 0%, #d6d3ea 21%,  #cfb9d3 58%, #8682a6 100%);
+	text-align:right;
+ }
+ 
+ footer div {
+	padding:20px 30px 20px 0;
+ }
+ 
+ footer .foot {
+	display:inline-block;
+	margin:0;
+	font-size:1.5rem;
+	color:rgba(214,211,234,1);
+	border-right:2px solid rgba(214,211,234,0.4);
+	padding-right:20px;
+	margin-right:20px;
+ }
+ 
+ footer div a{
+	color:rgba(214,211,234,0.5);
+	transition:color 0.3s;
+	padding-right:25px;
+	font-size:2rem;
+ }
+ 
+  footer div a:hover{
+	color:rgba(214,211,234,0.3);
+	transition:color 0.3s;
+	text-decoration:none;
+ }
+ 
+ div.topA {
+	display:block;
+	width:60px;
+	height:60px;
+	padding-top:10px;
+	border-radius:30px;
+	position:fixed;
+	bottom:80px;
+	right:40px;
+	opacity:0.4;
+	text-align:center;
+	font-size:2em;
+	background-image: linear-gradient(to right, #f9eada 0%, #e5e6f4 0%, #d6d3ea 21%,  #cfb9d3 58%, #8682a6 100%);
+ }
+
+ div.topA:hover {
+	background-image: linear-gradient(to right, #f9eada 0%, #e5e6f4 0%, #d6d3ea 21%,  #cfb9d3 58%, #8682a6 100%);
+	opacity:1;
+ }
+ 
+ div.topA a{
+	display:block;
+	text-decoration:none;
+	color:#8682A6;
+ }
+ 
+
+</style>
+</head>
+<body>
+<div class="header container-fluid text-center ">
+	<h1 class="text-light">NATURE</h1>
+	<p class="text-light">Nunc id quam id augue porta malesuada a lobortis ante	Praesent vel lacus mollis, venenatis sem sed, convallis velit.</p>
+</div>
+<div class="container">
+	<div class="row m-auto">
+		<ul class="nav justify-content-end pt-4 col-lg-5 col-md-12 col-sm-6 text-center">
+		  <li class="nav-item col-lg-3 col-sm-12 ">
+			<a class="nav-link " href="#">Diary</a>
+		  </li>
+		  <li class="nav-item col-lg-3 col-sm-12">
+			<a class="nav-link" href="#">Review</a>
+		  </li>
+		  <li class="nav-item col-lg-3 col-sm-12">
+			<a class="nav-link" href="#">Asks</a>
+		  </li>
+		  <li class="nav-item col-lg-3 col-sm-12">
+			<a class="nav-link" href="#">Contact</a>
+		  </li>
+		</ul>
+		<div class="form col-lg-7 col-md-12 col-sm-6 text-center pt-3">
+			<span><a href="#" title="SEARCH 搜尋請按"><i class="fas fa-search"></i></a></span>
+			<form>
+				<div class="pt-3">
+					<input type="text" name="q" placeholder="Search for..." >
+					<p><a href="#">Search！</a></p>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<div class="article_1 container ">
+	<div class="row">
+		<div class="col-lg-6 col-md-4 col-sm-12">
+			<div class="description text-center">
+					<h2>臺北夜景</h2>
+					<h2>VS</h2>
+					<h2>日本山景</h2>
+					<p class="px-4 py-2">Sed vehicula diam non diam volutpat aliquam non eu ligulaNunc efficitur arcu quis semper mattis
+Vivamus sodales velit et tempus porttitorMorbi consequat mauris tincidunt volutpat tincidunt.</p>
+			</div>
+		</div>
+		<div class="col-lg-3 col-md-4 col-sm-12">
+			<div class="images">
+				<div class="view"><img src="style/101.jpeg" alt="buliding 101"></div>
+			</div>
+		</div>
+		<div class="col-lg-3 col-md-4 col-sm-12">
+			<div class="images">
+				<div class="view"><img src="style/mountain01.jpg" alt="mountain"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="slide container-fluid py-5">
+	<div class="slide_wh bg-white">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="picture01">
+					<div class="p_1"><img src="style/004.jpg"></div>
+					<div class=" word bg-light text-center">
+						<h3 class="pt-3">HOT SPOT</h3>
+						<p class="px-5 pb-4 pt-3">New Taipei City If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, 
+						making this the first true generator on the Internet. </p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="picture01">
+					<div class="p_1"><img src="style/001.jpg"></div>
+					<div class=" word bg-light text-center">
+						<h3 class="pt-3">HOT SPOT</h3>
+						<p class="px-5 pb-4 pt-3">New Taipei City If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, 
+						making this the first true generator on the Internet. </p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="picture01">
+					<div class="p_1"><img src="style/002.jpg"></div>
+					<div class=" word bg-light text-center">
+						<h3 class="pt-3">HOT SPOT</h3>
+						<p class="px-5 pb-4 pt-3">New Taipei City If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, 
+						making this the first true generator on the Internet. </p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="fixed container-fluid">
+	<div>
+		<h3 class="moving_h3 text-center"> BEAUTIFUL SENERY</h3>
+		<p class="moving_p text-center">Nunc nec orci vestibulum, bibendum dolor vitae, volutpat nisi. Aliquam cursus faucibus sollicitudin.</p>
+	</div>
+</div>
+<div class="container py-5">
+	<div class="row">
+		<div class="col-lg-4 col-md-6 col-sm-12 ">
+			<div class="icon text-center shadow-sm">
+				<p class="mx-auto"><i class="fas fa-map-pin"></i></p>
+			</div>
+			<div class="item bg-light text-center shadow-sm p-3 mb-5 ">
+				<h3 class="p-4">LOCATION</h3>
+				<p class="px-5 pb-4">Etiam nec neque at lacus placerat blandit sed quis tortor cursus. </p>
+			</div>
+		</div>
+		<div class="col-lg-4 col-md-6 col-sm-12">
+			<div class="icon text-center shadow-sm">
+				<p class="mx-auto"><i class="fas fa-democrat"></i></p>
+			</div>
+			<div class="item bg-light text-center shadow-sm p-3 mb-5">
+				<h3 class="p-4">CULTURE</h3>
+				<p class="px-5 pb-4">Morbi felis nulla, lobortis sed diam at, pretium fermentum sem. </p>
+			</div>
+		</div>
+		<div class="col-lg-4 col-md-6 col-sm-12">
+			<div class="icon text-center shadow-sm">
+				<p class="mx-auto"><i class="fas fa-drumstick-bite"></i></p>
+			</div>
+			<div class="item bg-light text-center shadow-sm p-3 mb-5">
+				<h3 class="p-4">LOCAL DISHES</h3>
+				<p class="px-5 pb-4">Vestibulum erat purus, egestas cursus mauris eget, rutrum elementum eros.</p>
+			</div>
+		</div>
+		<div class="col-lg-4 col-md-6 col-sm-12">
+			<div class="icon text-center shadow-sm">
+				<p class="mx-auto"><i class="fas fa-cloud-sun"></i></p>
+			</div>
+			<div class="item bg-light text-center shadow-sm p-3 mb-5">
+
+				<h3 class="p-4">WEATHER</h3>
+				<p class="px-5 pb-4">Praesent quis neque eu ante fermentum scelerisque elementum vitae dolor. </p>
+			</div>
+		</div>
+		<div class="col-lg-4 col-md-6 col-sm-12">
+			<div class="icon text-center shadow-sm">
+				<p class="mx-auto"><i class="fas fa-skiing"></i></p>
+			</div>
+			<div class="item bg-light text-center shadow-sm p-3 mb-5">
+
+				<h3 class="p-4">ACTIVITIES</h3>
+				<p class="px-5 pb-4">Donec malesuada vel nisl ut maximus praesfdnt quis imus fermentum. </p>
+			</div>
+		</div>
+		<div class="col-lg-4 col-md-6 col-sm-12">
+			<div class="icon text-center shadow-sm">
+				<p class="mx-auto"><i class="fas fa-suitcase-rolling"></i></p>
+			</div>
+			<div class="item bg-light text-center shadow-sm p-3 mb-5">
+
+				<h3 class="p-4">TRIP ITINERARIES</h3>
+				<p class="px-5 pb-4">Etiam a elit pretium, dignissim nunc nec, sollicitudin mauris raesent quis . </p>
+			</div>
+		</div>
+	</div>
+</div>
+<footer class="container-fluid">
+	<div>
+		<p class="foot">Nature.Diary</p>
+		<a href="#" class="fas fa-home" title="Open map!"></a>
+		<a href="#" class="fas fa-envelope" title="Send mails to us!"></a>
+		<a href="#" class="fab fa-line" title="Line us!"></a>
+		<a href="#" class="fab fa-instagram" title="Follow us!"></a>
+		<a href="#" class="fab fa-facebook-square" title="Check our new information!"></a>
+	</div>
+</footer>
+<div class="topA">
+	<a href="#" class="fas fa-caret-up"></a>
+</div>
+</body>
+</html>
